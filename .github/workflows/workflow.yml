@@ -34,6 +34,9 @@ jobs:
         # https://github.com/paambaati/codeclimate-action
       - name: Run test & publish code coverage
         uses: paambaati/codeclimate-action@v2.6.0
+        runs:
+          using: 'node16'
+          main: 'main.js'
         # Add Code Climate secret key
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
