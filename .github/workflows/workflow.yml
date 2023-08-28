@@ -24,12 +24,6 @@ jobs:
         with:
           # Specify the PHP version
           php-version: '8.1'
-          runs:
-            using: 'node16'
-            pre: 'setup.js'
-            main: 'index.js'
-            post: 'cleanup.js'
-
       - name: Install
         # Install project
         run: make install
